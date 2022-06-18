@@ -15,6 +15,8 @@ private TextView tvRes;
 private EditText eText1;
 private EditText eText2;
 
+
+
 private int [] numbers = {23,32,6,78,9};
 private String [] texts = {"YES", "NO", "MORE"};
 private int[] numbers2 = new int[10];
