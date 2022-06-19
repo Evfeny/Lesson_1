@@ -66,7 +66,7 @@ private TextView tvTest2;
         tvTest2.setText(temp2);
 
 
-            /* char ch;
+            /*char ch;
                 for (int i = 0; i < textTest.length();i++) {
                 ch = textTest.charAt(i);
                 tvTest2.append(String.valueOf(ch));
