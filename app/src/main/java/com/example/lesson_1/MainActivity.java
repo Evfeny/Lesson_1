@@ -16,14 +16,7 @@ private EditText eText1;
 private EditText eText2;
 
 private TextView tvTest2;
-private String testString = "Green <OAK> by the seaside";
-private char ch;
 
-
-
-private int [] numbers = {23,32,6,78,9};
-private String [] texts = {"YES", "NO", "MORE"};
-private int[] numbers2 = new int[10];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +25,8 @@ private int[] numbers2 = new int[10];
 
         tvTest2 = findViewById(R.id.tvText2);
         tvTest2.setText("");
-        getTextFromSimbol(testString);
+        String testString = "Green <OAK> by the seaside";
+        getTextFromSymbol(testString);
 
 
 
@@ -43,6 +37,9 @@ private int[] numbers2 = new int[10];
         eText1 = findViewById(R.id.editTextTextPersonName);
         eText2 = findViewById(R.id.editTextTextPersonName2);
 
+         int [] numbers = {23,32,6,78,9};
+         String [] texts = {"YES", "NO", "MORE"};
+         //int[] numbers2 = new int[10];
 
         Log.d("MyLog","Значение из массива: " + numbers[0]);
         Log.d("MyLog","Значение из массива: " + texts[0]);
@@ -61,15 +58,17 @@ private int[] numbers2 = new int[10];
         tvRes.setText(String.valueOf(result));
         tvRes.setVisibility(View.VISIBLE);
     }
-    private void getTextFromSimbol(String textTest) {
+    private void getTextFromSymbol(String textTest) {
         int pos_1 = textTest.indexOf('<');
         String temp = textTest.substring(pos_1 + 1);
         pos_1 = temp.indexOf('>');
         String temp2 = temp.substring(0,pos_1);
         tvTest2.setText(temp2);
 
-                  /*  for (int i = 0; i < testString.length();i++) {
-                ch = testString.charAt(i);
+
+            /*char ch;
+                for (int i = 0; i < textTest.length();i++) {
+                ch = textTest.charAt(i);
                 tvTest2.append(String.valueOf(ch));
                 //tvTest2.append("\n");
             }*/
