@@ -16,7 +16,7 @@ private EditText eText1;
 private EditText eText2;
 
 private TextView tvTest2;
-private String testString = "Green oak by the seaside";
+private String testString = "Green <OAK> by the seaside";
 private char ch;
 
 
@@ -32,11 +32,14 @@ private int[] numbers2 = new int[10];
 
         tvTest2 = findViewById(R.id.tvText2);
         tvTest2.setText("");
-            for (int i = 0; i < testString.length();i++) {
+        int pos_1 = testString.indexOf('<');
+        String temp = testString.substring(7,10);
+        tvTest2.setText(temp);
+          /*  for (int i = 0; i < testString.length();i++) {
                 ch = testString.charAt(i);
                 tvTest2.append(String.valueOf(ch));
-                tvTest2.append("\n");
-            }
+                //tvTest2.append("\n");
+            }*/
 
 
         tvTest = findViewById(R.id.tvTest);
