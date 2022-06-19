@@ -15,6 +15,10 @@ private TextView tvRes;
 private EditText eText1;
 private EditText eText2;
 
+private TextView tvTest2;
+private String testString = "Green oak by the seaside";
+private char ch;
+
 
 
 private int [] numbers = {23,32,6,78,9};
@@ -25,6 +29,15 @@ private int[] numbers2 = new int[10];
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tvTest2 = findViewById(R.id.tvText2);
+        tvTest2.setText("");
+            for (int i = 0; i < testString.length();i++) {
+                ch = testString.charAt(i);
+                tvTest2.append(String.valueOf(ch));
+                //tvTest2.append("\n");
+            }
+
 
         tvTest = findViewById(R.id.tvTest);
 
