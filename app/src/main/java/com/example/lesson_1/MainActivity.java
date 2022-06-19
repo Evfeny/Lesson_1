@@ -33,8 +33,10 @@ private int[] numbers2 = new int[10];
         tvTest2 = findViewById(R.id.tvText2);
         tvTest2.setText("");
         int pos_1 = testString.indexOf('<');
-        String temp = testString.substring(7,10);
-        tvTest2.setText(temp);
+        String temp = testString.substring(pos_1 + 1);
+        pos_1 = temp.indexOf('>');
+        String temp2 = temp.substring(0,pos_1);
+        tvTest2.setText(temp2);
           /*  for (int i = 0; i < testString.length();i++) {
                 ch = testString.charAt(i);
                 tvTest2.append(String.valueOf(ch));
