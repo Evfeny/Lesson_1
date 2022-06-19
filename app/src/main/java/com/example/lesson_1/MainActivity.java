@@ -35,7 +35,7 @@ private int[] numbers2 = new int[10];
             for (int i = 0; i < testString.length();i++) {
                 ch = testString.charAt(i);
                 tvTest2.append(String.valueOf(ch));
-                //tvTest2.append("\n");
+                tvTest2.append("\n");
             }
 
 
